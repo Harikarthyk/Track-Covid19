@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title>COVID-19 Tracker India</title>		
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	
+	</head>
+	
+	<div class="container">
+		
+			<div class="header">
+				<h1>COVID-19 Tracker </h1>
+			</div>
+		
+			<br>
+			
+			<div class="stateDetails">
+				<div class="head">
+					<div class="state"> </div> 
+					<div class="popup"></div>
+					<div class="color-def">
+						<div class="red"><div id="red"></div><div class="color-def-content">50 <= Cases </div> </div>
+						<div class="orange"><div id="orange"></div><div class="color-def-content">15 <= Cases < 50 </div> </div>
+						<div class="green"><div id="green"></div><div class="color-def-content">Cases < 15 </div></div>
+					</div>
+				</div>
+				
+				<div class="district-body"></div>
+			</div>
+		
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="COVID19India.js"></script>
+	</body>
+</html>

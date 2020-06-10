@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>COVID-19 Tracker</title>
+		<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>COVID-19 Tracker </h1>
+				<div class="head-content">
+					<div class="head-global"> Global </div>
+					<div class="head-india"> India </div>
+				</div>
+			</div>
+			<br>
+			<div class="main">
+				<div class="india" id="india">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>S.No</th>
+								<th>State</th>
+								<th>Total Cases</th>
+								<th>Active</th>
+								<th>Cured</th>
+								<th>Death</th>
+							</tr>
+							<tbody>			
+							</tbody>
+						</thead>
+					</table>
+				</div>
+				<div class="global">
+					<div class="global-content-head">
+						<div class="global-content">
+							<h2 class="global-box"> Across the GLOBE </h2>
+						</div>
+
+					</div>
+					<div class="popup">
+						<div class="popup-total"></div>
+						<div class="popup-deaths"></div>			
+					</div>
+					<div class="global-content-sub">
+						<div class="global-search-country">
+							<div class="global-search-country-inputbox">
+								<input type="text" name="country" class="input" placeholder="Enter the Country .. " >
+								<i>GO</i>	
+							</div>
+						</div>
+						<div class="country-details-head"></div>
+						<div class="country-details">
+							
+							<div class="country-details-main1"></div>
+							<div class="country-details-sub">
+								<div class="country-details-main2"></div>
+								<div class="country-details-main4"></div>
+								<div class="country-details-main3"></div>	
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				&copy; Hari_karthyk 
+				<br>
+				All Details are fetched from public API ..
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="COVID19Tracker.js"></script>
+	</body>
+</html>

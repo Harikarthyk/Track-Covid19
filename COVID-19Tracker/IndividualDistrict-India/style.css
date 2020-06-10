@@ -1,0 +1,99 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	background-color: #f1f4f5;
+}
+.header{
+	font-family: 'Bree Serif', serif;
+	width: 100%;
+	position: fixed;
+	border-radius: 8px;
+	background-color: #7bb7eb;
+}
+h1{
+	padding: 13px;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------*/															/*Redirect Content Style*/
+.stateDetails{
+}
+
+.head{
+	margin: 60px;
+	border-bottom: 2px solid black;
+}
+
+.color-def{
+	display: inline-block;
+	width: 65%;
+}
+.color-def-content{
+	display: inline-block;
+	vertical-align: super;
+	font-size: larger;
+	margin-left: 13px;
+}
+.red,.orange,.green{
+	font-family: 'Balsamiq Sans', cursive;
+	display: inline-block;
+	margin: 0px 0px 0px 2.3%;
+}
+#red,#green,#orange {
+	display: inline-block;
+	width: 34px;
+	height: 36px;
+	vertical-align: bottom;
+	border-radius: 9px;
+}
+#red{
+    background-color: #ff4f4f;
+}
+#green{
+    background-color: #71c650;
+}
+#orange{
+    background-color: #ffbd66;
+}
+.popup{
+	position: absolute;
+	font-family: 'Balsamiq Sans', cursive;
+    background-color: #7bb7eb;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+    left: 12%;
+}
+.state {
+	display: inline-block;
+	font-family: 'Varela Round', sans-serif;
+    padding: 10px;
+    font-size: xxx-large;
+    cursor: pointer;
+}
+.district-body{
+	text-align: center;
+}
+.district-head {
+    display: inline-block;
+    width: 15.33%;
+    background-color: #71c650;
+    margin: 20px;
+    padding: 40px;
+    font-family: 'Architects Daughter', cursive;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: left;
+}
+span{
+	text-transform: uppercase;
+	font-size: x-large;
+	margin-bottom:;
+}
+.district-total,.district-active,.district-cured{
+	font-family: 'Balsamiq Sans', cursive;	
+	font-size: larger;
+	text-align: end;
+	margin-top: 11px;
+}	
