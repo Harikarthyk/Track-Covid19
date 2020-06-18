@@ -27,6 +27,16 @@ body{
     font-size: larger;
 
 }
+.india-marker {
+    position: absolute;
+    top: 5rem;
+    right:1%;
+    background-color: #ff7c7c;
+    padding: 5px;
+    border-radius: 9px;
+    font-size: medium;
+    font-style: oblique;
+}
 h1{
 	display: inline-block;
 	padding: 1%;
