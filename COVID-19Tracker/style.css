@@ -1,56 +1,52 @@
 *{
-	margin:0px;
-	padding:0px;
+    margin:0px;
+    padding:0px;
 }
 
 body{
-	background-color: #f1f4f5;
+    background-color: #f1f4f5;
 }
 .header{
-	font-family: 'Bree Serif', serif;
-	width: 100%;
-	position: fixed;
-	border-radius: 8px;
-	background-color: #7bb7eb;
+    font-family: 'Bree Serif', serif;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    border-radius: 8px;
+    background-color: #7bb7eb;
 }
 .head-content {
-    display: inline-block;
     float: right;
-}
-.head-global:hover, .head-india:hover{
-	background-color: #f1f4f5;
-}
-.head-global, .head-india {
-    display: inline-block;
-    margin: 22px;
     cursor: pointer;
-    font-size: larger;
-
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
 }
-.india-marker {
-    position: absolute;
-    top: 5rem;
-    right:1%;
-    background-color: #ff7c7c;
-    padding: 5px;
-    border-radius: 9px;
-    font-size: medium;
-    font-style: oblique;
+.head-india:hover{
+    background-color: #f1f4f5;
+}
+.head-india {
+    font-size: larger;
+    border: 1px solid;
+    padding: .5rem;
+    background-color: #fffd8a;
+    border-radius: 25%;
 }
 h1{
-	display: inline-block;
-	padding: 1%;
+    display: flex;
+    padding: 1%;
+    flex: 10;
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-															/*Global Tracking Details*/
+                                                            /*Global Tracking Details*/
 
 .global{
-	margin-top: 8%;
+    margin-top: 8%;
 }
 .global-content {
-   	font-family: 'Balsamiq Sans', cursive;
-   	position: relative;
-   	display: flex;
+    font-family: 'Balsamiq Sans', cursive;
+    position: relative;
+    display: flex;
 }
 .global-content-head {
     display: flex;
@@ -69,7 +65,7 @@ h2{
     align-items: center;
 }
 .global-box {
-	background-color: #ff7c7c;
+    background-color: #ff7c7c;
     width: 33%;
     padding: 20px;
     flex: 1;
@@ -79,7 +75,7 @@ h2{
     margin: 5px;
 }
 .popup-total,.popup-deaths{
-	display: none;
+    display: none;
 }
 .popup {
     font-family: 'Varela Round', sans-serif;
@@ -104,14 +100,10 @@ h2{
     border-radius: 12px;
 }
 .global-content-sub{
-	margin-top: 5%;
-}
-.global-search-country {
-    /* display: flex; */
-    /* justify-content: center; */
+    margin-top: 5%;
 }
 input:focus , textarea:focus ,select:focus {
-	outline: none;
+    outline: none;
 }
 input.input {
     border: none;
@@ -127,7 +119,7 @@ input.input {
     justify-content: center;
 }
 i:hover{
-	background-color: #d2d5d8 ;
+    background-color: #d2d5d8 ;
 }
 i{
     font-size: x-large;
@@ -142,8 +134,8 @@ i{
     margin-top: 3%;
     margin-bottom: 2%;
     display: flex;
-	font-family: 'Varela Round', sans-serif;
-	text-decoration: underline;
+    font-family: 'Varela Round', sans-serif;
+    text-decoration: underline;
     text-transform: uppercase;
     justify-content: center;
     font-size: xx-large;
@@ -161,8 +153,8 @@ i{
     text-align: center;
 }
 .country-details-sub {
-	flex: 2;
-	font-family: 'Varela Round', sans-serif;
+    flex: 2;
+    font-family: 'Varela Round', sans-serif;
 }
 .country-details-main4,.country-details-main3 ,.country-details-main2 {
     display: flex;
@@ -175,7 +167,7 @@ i{
 }
 
 .country-details-main3 {
-	background-color: #2cdc33;
+    background-color: #2cdc33;
 }
 
 .country-details {
@@ -185,25 +177,33 @@ i{
     max-width: 45%;
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
-															/*India Tracking Details Tables */
+                                                            /*India Tracking Details Tables */
 #india{
-	display: flex;	
+    display: flex;  
 }
 .india {
-	justify-content: center;
+    justify-content: center;
+}
+.main-head {
+    display: none;
+    text-align: center;
+    padding: 2%;
+    font-size: 2rem;
+    font-variant: petite-caps;
+    text-decoration-line: underline;
 }
 .main {
     margin-top: 5%;
 }
 .stateName{
-	cursor: pointer;
+    cursor: pointer;
 }
 th{
-	background-color: white; 
-	text-transform: uppercase;
+    background-color: white; 
+    text-transform: uppercase;
 }
 tr:nth-child(odd){
-	background-color: #c4d6e5;;
+    background-color: #c4d6e5;;
 }
 table, th, td{
     border: 1px solid #cdcdcd;
@@ -213,7 +213,7 @@ table th, table td{
     text-align: left;
 }
 table.table {
-	border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 
