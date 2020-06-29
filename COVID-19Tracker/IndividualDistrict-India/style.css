@@ -75,6 +75,12 @@ h1{
 .district-body{
 	text-align: center;
 }
+.district-head:hover {
+    cursor: pointer;
+    color: white;
+    width: unset;
+    box-shadow: 17px 21px black;
+}
 .district-head {
     display: inline-block;
     width: 15.33%;
@@ -84,6 +90,7 @@ h1{
     font-family: 'Architects Daughter', cursive;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: 7px 7px #888888;
     text-align: left;
 }
 span{
