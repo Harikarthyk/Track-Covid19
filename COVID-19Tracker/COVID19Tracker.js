@@ -1,6 +1,5 @@
 function indiaCovidDetails(){
 	$.getJSON("https://api.covid19india.org/data.json",function(data){
-	
 		var allState = data.statewise;
 	
 		for( var i=1;i<38;i++ ) {
@@ -52,7 +51,6 @@ function globalCountryDetails( country ){
 		$('.country-details-head').text(country) ;
 		var total = data.latest.confirmed ;
 		var death = data.latest.deaths;
-		console.log(data);
 		$('.country-details-main1').text( "Total "+total+" Death "+death ) ;
 		var affectRatio = Math.round( data.locations[0].country_population/data.latest.confirmed ) ;
 		$('.country-details-main2').text( "For Every "+affectRatio+" people 1 gets Affected " ) ;
@@ -62,17 +60,16 @@ function globalCountryDetails( country ){
 		lastUpdated = lastUpdated.substring(0,10) ;
 		$('.country-details-main3').text( "Last Updated : "+lastUpdated ) ;
 		
-		// alert(total+" "+death) ;
 	});
 }
-$(document).keydown(function(e){
-    if(e.which === 123){
-       return false;
-    }
-});
-$(document).bind("contextmenu",function(e) {
- e.preventDefault();
-});
+// $(document).keydown(function(e){
+//     if(e.which === 123){
+//        return false;
+//     }
+// });
+// $(document).bind("contextmenu",function(e) {
+//  e.preventDefault();
+// });
 $(document).ready(function(){
 	$('#india').css( 'display' , 'none' ) ;	
 	globalCovidDetails();	
@@ -80,13 +77,15 @@ $(document).ready(function(){
 		$('.india').show() ;
 		$('#india').css( 'display' , 'flex !important' ) ;
 		$('.global').hide();
+		$('.main-head').css( 'display' , 'block' ) ;
 		indiaCovidDetails() ;
 	});
 	
-	$('.head-global').on('click',function(){
+	$('h1').on('click',function(){
 		$('.india').hide() ;
 		$('.global').show();
-		$('#india').css( 'display' , 'none !important' ) ;	
+		// $('.main-head').hide();
+		$('.main-head').css( 'display' , 'none' ) ;	
 	});
 	$('.global-box').mouseover(function(){
 		$('.popup-total').show();
