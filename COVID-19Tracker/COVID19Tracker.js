@@ -71,12 +71,19 @@ function globalCountryDetails( country ){
 //  e.preventDefault();
 // });
 $(document).ready(function(){
+	var removeLoading = function() {
+		setTimeout(function(){
+			$("body").removeClass("loading");
+		},3000);
+	};
+	removeLoading();
 	$('#india').css( 'display' , 'none' ) ;	
 	globalCovidDetails();	
 	$('.head-india').on('click',function(){
 		$('.india').show() ;
 		$('#india').css( 'display' , 'flex !important' ) ;
 		$('.global').hide();
+		$('.india-marker').hide();
 		$('.main-head').css( 'display' , 'block' ) ;
 		indiaCovidDetails() ;
 	});
@@ -97,12 +104,16 @@ $(document).ready(function(){
 	$('.input').on('keyup',function(event){
 		if( event.keyCode===13 ){
 			var country = $('.input').val();
+			$('.country-details').show();
+			$('.country-details').css('display','flex') ;
 			globalCountryDetails(country) ;	
 		}
 	});
 	$('i').on( 'click',function(){
 		var country = $('.input').val();
-		// alert(country) ;
+		$('.country-details').show();
+		$('.country-details').css('display','flex') ;
+		
 		globalCountryDetails(country) ;
 	}) ;
 });
