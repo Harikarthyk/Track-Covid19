@@ -53,9 +53,9 @@ function globalCountryDetails( country ){
 		var death = data.latest.deaths;
 		$('.country-details-main1').text( "Total "+total+" Death "+death ) ;
 		var affectRatio = Math.round( data.locations[0].country_population/data.latest.confirmed ) ;
-		$('.country-details-main2').text( "For Every "+affectRatio+" people 1 gets Affected " ) ;
+		$('.country-details-main2').text( "For Every "+affectRatio+" people 1 get Affected " ) ;
 		affectRatio = Math.round( data.locations[0].country_population/data.latest.deaths ) ;
-		$('.country-details-main4').text( "For Every "+affectRatio+" people 1 dies " ) ;
+		$('.country-details-main4').text( "For Every "+affectRatio+" people 1 die " ) ;
 		var lastUpdated = data.locations[0].last_updated ;
 		lastUpdated = lastUpdated.substring(0,10) ;
 		$('.country-details-main3').text( "Last Updated : "+lastUpdated ) ;
