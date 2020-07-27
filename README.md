@@ -6,4 +6,3 @@ Tools used : Html , Css , JS( Jquery ) .
 
 All Details and statistics are fetched from the Public API .
 
-Check this -> https://trackcase-covid19.netlify.app/
