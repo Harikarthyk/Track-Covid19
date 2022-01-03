@@ -35,11 +35,12 @@ function globalCovidDetails() {
 		var popupDeaths = Math.round(7800000000 / data.latest.deaths);
 		popupDeaths = "For Every " + popupDeaths + " - 1 people dies ";
 		$('.popup-deaths').append(popupDeaths);
+		removeLoading();
 	});
 
 }
 function globalCountryDetails(country) {
-	$.getJSON("https://coronavirus-tracker-api.herokuapp.com/v2/locations?country=" + country, function (data) {
+	$.getJSON("https://coronavirus-tracker-api.herokuapp.com/v2/locations?country" + country, function (data) {
 		$('.country-details-head').text(country);
 		var total = data.latest.confirmed;
 		var death = data.latest.deaths;
@@ -54,13 +55,13 @@ function globalCountryDetails(country) {
 
 	});
 }
+var removeLoading = function () {
+	setTimeout(function () {
+		$("body").removeClass("loading");
+	}, 3000);
+};
 $(document).ready(function () {
-	var removeLoading = function () {
-		setTimeout(function () {
-			$("body").removeClass("loading");
-		}, 3000);
-	};
-	removeLoading();
+	
 	$('#india').css('display', 'none');
 	globalCovidDetails();
 	$('.head-india').on('click', function () {
