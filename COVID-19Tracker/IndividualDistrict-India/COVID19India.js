@@ -8,8 +8,8 @@ $(document).bind("contextmenu",function(e) {
 });
 $(document).ready(function() {
 	
-	$.getJSON("https://api.covid19india.org/state_district_wise.json",function(data){
-
+	$.getJSON("https://data.covid19india.org/state_district_wise.json",function(data){
+		
 		var state = localStorage.getItem('state');
 		var stateDetails = data[state].districtData ;
 		var stateTotal = localStorage.getItem('stateTotal') ;	
