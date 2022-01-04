@@ -1,12 +1,15 @@
 function indiaCovidDetails() {
 	$.getJSON("https://api.rootnet.in/covid19-in/stats/latest", function (data) {
 		var allState = data.data.regional;
+		let formatter = Intl.NumberFormat('en', { notation: 'compact' });
+		
 		for (var i = 0; i < allState.length; i++) {
-			var state = allState[i]?.loc;
-			var active = allState[i].totalConfirmed - allState[i].discharged;
-			var total = allState[i].totalConfirmed;
-			var recovered = allState[i].discharged;
-			var deaths = allState[i].deaths;
+			
+			var state = formatter.format(allState[i]?.loc);
+			var active = formatter.format(allState[i].totalConfirmed - allState[i].discharged);
+			var total = formatter.format(allState[i].totalConfirmed);
+			var recovered = formatter.format(allState[i].discharged);
+			var deaths = formatter.format(allState[i].deaths);
 			var tableRow = "<tr><td>" + (i + 1) +
 				"</td><td class=stateName total=" + total + " active=" + active + " deaths=" + deaths + ">" + state + "</td><td>" + total + "</td><td>" + active + "</td><td>" + recovered + "</td><td>" + deaths + "</td></tr>";
 			$('.table').append(tableRow);
@@ -24,8 +27,9 @@ function indiaCovidDetails() {
 function globalCovidDetails() {
 
 	$.getJSON("https://coronavirus-tracker-api.herokuapp.com/v2/locations", function (data) {
-		var total = "Total " + data.latest.confirmed;
-		var deaths = "Death " + data.latest.deaths;
+		let formatter = Intl.NumberFormat('en', { notation: 'compact' });
+		var total = "Total " + formatter.format(data.latest.confirmed);
+		var deaths = "Death " + formatter.format(data.latest.deaths);
 		var globalContent = "<p class=global-box>" + total + "</p><p class=global-box>" + deaths + "</p>";
 		$('.global-content').append(globalContent);
 		var popupTotal = Math.round(7800000000 / data.latest.confirmed);
@@ -40,10 +44,11 @@ function globalCovidDetails() {
 
 }
 function globalCountryDetails(country) {
-	$.getJSON("https://coronavirus-tracker-api.herokuapp.com/v2/locations?country" + country, function (data) {
+	$.getJSON("https://coronavirus-tracker-api.herokuapp.com/v2/locations?country=" + country, function (data) {
 		$('.country-details-head').text(country);
-		var total = data.latest.confirmed;
-		var death = data.latest.deaths;
+		let formatter = Intl.NumberFormat('en', { notation: 'compact' });
+		var total = formatter.format(data.latest.confirmed);
+		var death = formatter.format(data.latest.deaths);
 		$('.country-details-main1').text("Total " + total + " Death " + death);
 		var affectRatio = Math.round(data.locations[0].country_population / data.latest.confirmed);
 		$('.country-details-main2').text("For Every " + affectRatio + " people 1 get Affected ");
